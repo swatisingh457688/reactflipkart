@@ -1,0 +1,49 @@
+ <div className="col-lg-12 d-flex justify-content-evenly">
+              {
+                ((arrty !== '') && (arrty !== null)) ? .map((obj, index) => {
+                  return <div onMouseOver={() => {
+                    setshow(index)
+                  }} key={index} className="box">
+                    <img className='img' src={obj.imgUrl} alt={obj.te} />
+                    <div className="txt1">{obj.te}</div>
+
+
+
+
+
+                    <div className={`box2 ${show === 2 ? '' : 'hide'}`}>
+                      <div className='c1 cc'>
+
+
+                        {
+                          ((arr !== '') && (arr !== null)) ? ahowArr.map((obj, index) => {
+                            return <div onMouseOver={() => {
+                              // console.log(obj.li)
+
+                              setarrSub(obj.li)
+                            }}>
+                              {obj.te}
+                            </div>
+                          }) : ''
+                        }
+
+                      </div>
+
+                      <div className='c2 cc'>
+
+                        {
+                          arrSub.map((arrA, index) => {
+                            return <div key={index}>
+                              {arrA}
+                            </div>
+                          })
+                        }
+                      </div>
+
+                    </div>
+
+                  </div>
+                }) : ''
+              }
+
+            </div>
